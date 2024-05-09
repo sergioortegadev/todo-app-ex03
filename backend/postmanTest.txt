@@ -1,0 +1,17 @@
+pm.test("Status code is 200 or 204", function () {
+    pm.expect(pm.response.code).to.be.oneOf([200, 204]);
+});
+
+// Verificar si la respuesta contiene 'ok' cuando el código de estado es 200
+if (pm.response.code === 200) {
+    pm.test("Response body contains 'ok'", function () {
+        pm.expect(pm.response.text()).to.include("ok");
+    });
+}
+
+// Verificar si la respuesta está vacía cuando el código de estado es 204
+if (pm.response.code === 204) {
+    pm.test("Response body is empty", function () {
+        pm.expect(pm.response.text()).to.eql("");
+    });
+}

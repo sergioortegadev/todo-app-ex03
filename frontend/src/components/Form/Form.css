@@ -1,0 +1,38 @@
+.form-new-prod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+}
+.form-new-prod h3 {
+  margin: 0.25rem;
+}
+.form-new-prod form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  background-color: #444;
+  padding: 0.5rem 0 0 0;
+}
+.form-new-prod form:hover,
+.form-new-prod form:active {
+  border-color: #999;
+}
+.form-new-prod form input,
+.form-new-prod form textarea {
+  width: 12rem;
+  margin: 0.25rem;
+}
+.form-new-prod form textarea {
+  height: 3rem;
+  resize: none;
+}
+
+.form-new-prod input[type="submit"],
+.form-new-prod input[type="button"] {
+  width: 4rem;
+}
